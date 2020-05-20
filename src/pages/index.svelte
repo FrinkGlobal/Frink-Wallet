@@ -2,17 +2,6 @@
     let title = 'Frink`s Wallet';
 </script>
 
-<main>
+<main class="p-8 text-center text-blue-400 text-lg">
     <h1>{title}</h1>
 </main>
-
-<style>
-    main {
-        padding: 2rem;
-    }
-
-    h1 {
-        color: #2b4888;
-        text-align: center;
-    }
-</style>
