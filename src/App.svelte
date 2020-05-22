@@ -7,12 +7,12 @@
 
 <style global>
     @import 'tailwindcss/base';
-    @import './pages/utils/tailwind/custom-base.css';
+    @import './utils/tailwindcss/custom-base.css';
     @import 'tailwindcss/components';
-    @import './pages/utils/tailwind/custom-component.css';
+    @import './utils/tailwindcss/custom-component.css';
     @import 'tailwindcss/utilities';
-    @import './pages/utils/tailwind/custom-utilities.css';
+    @import './utils/tailwindcss/custom-utilities.css';
     :global(body) {
-        @apply w-screen h-screen overflow-hidden bg-green-100;
+        @apply w-screen h-screen overflow-hidden bg-color;
     }
 </style>

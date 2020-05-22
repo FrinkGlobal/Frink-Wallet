@@ -9,8 +9,8 @@ module.exports = {
             xl: '1444px',
         },
         fontFamily: {
-            body: ['Sen', 'Helvetica', 'sans-serif'],
-            button: ['Rubik', 'Helvetica', 'sans-serif'],
+            body: ['Montserrat', 'Helvetica', 'sans-serif'],
+            button: ['Montserrat', 'Helvetica', 'sans-serif'],
         },
         inset: {
             '0': '0',
