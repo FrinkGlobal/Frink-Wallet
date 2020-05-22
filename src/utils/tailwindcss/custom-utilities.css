@@ -39,6 +39,11 @@
         box-shadow: -2px -2px 5px var(--white), 2px 2px 5px var(--shadow);
     }
 
+    .active-sh {
+        box-shadow: inset 1px 1px 2px var(--shadow),
+            inset -1px -1px 2px var(--white);
+    }
+
     .in-sh {
         box-shadow: inset 2px 2px 5px var(--shadow),
             inset -5px -5px 10px var(--white);
@@ -51,6 +56,6 @@
     }
 }
 
-debug {
+.debug {
     border: 0.5px solid red;
 }
