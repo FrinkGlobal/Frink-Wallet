@@ -1,0 +1,61 @@
+:root {
+    --white: #fff;
+    --shadow: #babecc;
+}
+
+/* Color */
+.c-grey {
+    color: #babecc;
+}
+
+.c-dgrey {
+    color: #6b6b6b;
+}
+
+.c-blue {
+    color: #2b6ca3;
+}
+
+.c-red {
+    color: #ae1100;
+}
+
+.bg-color {
+    background-color: #ebecf0;
+}
+
+/* Effects */
+.tx-sh {
+    text-shadow: 1px 1px 1px var(--white);
+}
+
+@variants hover, focus, active {
+    .sh {
+        box-shadow: -5px -5px 20px var(--white), 5px 5px 20px var(--shadow);
+        @apply duration-100;
+    }
+
+    .hover-sh {
+        box-shadow: -2px -2px 5px var(--white), 2px 2px 5px var(--shadow);
+    }
+
+    .active-sh {
+        box-shadow: inset 1px 1px 2px var(--shadow),
+            inset -1px -1px 2px var(--white);
+    }
+
+    .in-sh {
+        box-shadow: inset 2px 2px 5px var(--shadow),
+            inset -5px -5px 10px var(--white);
+        @apply duration-100;
+    }
+
+    .hover-in-sh {
+        box-shadow: inset 1px 1px 2px var(--shadow),
+            inset -1px -1px 2px var(--white);
+    }
+}
+
+.debug {
+    border: 0.5px solid red;
+}
