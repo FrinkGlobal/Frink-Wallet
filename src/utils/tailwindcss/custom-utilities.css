@@ -2,31 +2,32 @@
     --white: #fff;
     --shadow: #babecc;
 }
+@variants hover {
+    /* Color */
+    .c-grey {
+        color: #babecc;
+    }
 
-/* Color */
-.c-grey {
-    color: #babecc;
-}
+    .c-dgrey {
+        color: #6b6b6b;
+    }
 
-.c-dgrey {
-    color: #6b6b6b;
-}
+    .c-blue {
+        color: #2b6ca3;
+    }
 
-.c-blue {
-    color: #2b6ca3;
-}
+    .c-red {
+        color: #ae1100;
+    }
 
-.c-red {
-    color: #ae1100;
-}
+    .bg-color {
+        background-color: #ebecf0;
+    }
 
-.bg-color {
-    background-color: #ebecf0;
-}
-
-/* Effects */
-.tx-sh {
-    text-shadow: 1px 1px 1px var(--white);
+    /* Effects */
+    .tx-sh {
+        text-shadow: 1px 1px 1px var(--white);
+    }
 }
 
 @variants hover, focus, active {

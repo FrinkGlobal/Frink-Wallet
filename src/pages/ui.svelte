@@ -2,7 +2,7 @@
     let title = 'Frink`s Wallet UI';
 </script>
 
-<main class="p-8">
+<div class="p-8">
     <h1 class="c-grey tx-sh font-bold text-3xl text-center">{title}</h1>
     <p class="text-3xl tx-sh font-bold">text-3xl tx-sh font-bold</p>
     <p class="c-grey text-xl tx-sh font-bold">
@@ -94,4 +94,4 @@
             <i class="fas fa-comment" />
         </button>
     </div>
-</main>
+</div>

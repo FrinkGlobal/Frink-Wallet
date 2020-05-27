@@ -13,6 +13,6 @@
     @import 'tailwindcss/utilities';
     @import './utils/tailwindcss/custom-utilities.css';
     :global(body) {
-        @apply w-screen h-screen overflow-hidden bg-color;
+        @apply overflow-hidden;
     }
 </style>
