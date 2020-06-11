@@ -1,6 +1,7 @@
 # Frink-Wallet
 
-This is the Frink's Wallet project, based on [Svelte](https://svelte.dev) and Routify, and compiled with Rollup.
+This is the Frink's Wallet project, based on [Svelte](https://svelte.dev) and
+Routify, and compiled with Rollup.
 
 ## Getting started
 
@@ -10,6 +11,13 @@ Clone the repo locally and follow the next steps to run the project:
 cd Frink-Wallet
 npm install
 npm run dev
+```
+
+If you want to run the project in Tauri, you need to:
+
+```
+npm run dev
+tauri dev
 ```
 
 ## Npm scripts
@@ -31,7 +39,8 @@ SSR and pre-rendering are included in the default build process.
 
 To render async data, call the `$ready()` helper whenever your data is ready.
 
-If \$ready() is present, rendering will be delayed till the function has been called.
+If \$ready() is present, rendering will be delayed till the function has been
+called.
 
 Otherwise it will be rendered instantly.
 
