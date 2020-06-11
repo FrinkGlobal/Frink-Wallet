@@ -1,4 +1,5 @@
-import svelte from 'rollup-plugin-svelte';
+import svelte from 'rollup-plugin-svelte-hot';
+import Hmr from 'rollup-plugin-hot';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
@@ -18,6 +19,15 @@ const shouldPrerender =
         : !!production;
 
 del.sync(distDir + '/**');
+
+const hot = !production;
+
+const hmr =
+    hot &&
+    Hmr({
+        inMemory: true,
+        public: 'static',
+    });
 
 function createConfig({ output, inlineDynamicImports, plugins = [] }) {
     const transform = inlineDynamicImports
@@ -47,9 +57,6 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
                 flatten: false,
             }),
             svelte({
-                preprocess: sveltePreprocess({
-                    postcss: true,
-                }),
                 // enable run-time checks when not in production
                 dev: !production,
                 hydratable: true,
@@ -58,6 +65,10 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
                 css: css => {
                     css.write(`${buildDir}/bundle.css`);
                 },
+                hot,
+                preprocess: sveltePreprocess({
+                    postcss: true,
+                }),
             }),
 
             // If you have external dependencies installed from
@@ -77,6 +88,8 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
             production && terser(),
 
             ...plugins,
+
+            hmr,
         ],
         watch: {
             clearScreen: false,
@@ -90,7 +103,10 @@ const bundledConfig = {
         format: 'iife',
         file: `${buildDir}/bundle.js`,
     },
-    plugins: [!production && serve(), !production && livereload(distDir)],
+    plugins: [
+        !production && serve(),
+        // !production && livereload(distDir)
+    ],
 };
 
 const dynamicConfig = {
