@@ -13,7 +13,6 @@
             <i class={`${iconName} mr-2`} />
             <span>{name}</span>
         </span>
-
     </a>
 </li>
 
